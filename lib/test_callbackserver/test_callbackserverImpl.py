@@ -66,6 +66,8 @@ class test_callbackserver:
         #BEGIN test_callbackserver
         headers = {'authorization': ctx['token']}
         req = requests.post(self.callback_url, headers=headers, json=params)
+        print('CBS raw text:')
+        print(req.txt)
         output = req.json()
         #END test_callbackserver
 
